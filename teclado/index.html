@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+    <style>
+        /* Estilos CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+        nav {
+            float: right;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+        .main-content {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Jogo de moto</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" id="home-link">Home</a></li>
+                    <li><a href="#" id="contact-link">Contato</a></li>
+                    <li><a href="#" id="about-link" onclick="window.open('sobre.html')">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<center>
+    <div class="main-content">
+        <h2>MOTO, GRAU E CORTE</h2>
+        <p>Texto descritivo sobre o tema escolhido.</p>
+        <p>Atalhos de teclado: <strong>CTRL + W</strong> para direcionar para Sobre, <strong>CTRL + I</strong> para acessar o link original da imagem e <strong>CTRL + M</strong> para acessar a área de mensagem.</p>
+        <a href="#" id="image-link" onclick="window.open('https://www.google.com/url?sa=i&url=https%3A%2F%2Fapkpure.net%2Fbr%2Fprojeto-grau%2Fcom.TechGameGroup.ProjetoGrau&psig=AOvVaw2SUUuRu3fs9m_0cDV_5Avf&ust=1713984190019000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKCWrOn-2IUDFQAAAAAdAAAAABAE')"> <img src="grau.jpg" alt="Imagem" width="200"></a>
+        <br><br>
+        <input type="text" id="message-input" placeholder="Digite sua mensagem">
+        <button onclick="sendMessage()">Enviar</button>
+    </div>
+</center>
+    <footer>
+        Desenvolvido por: Gabriel Gomes (Eu mesmo)
+    </footer>
+
+    <script>
+        // Script para atalhos de teclado
+        document.addEventListener('keydown', function(event) {
+            if (event.ctrlKey && event.key === 'w') {
+                window.location.href = 'sobre.html';
+            } else if (event.ctrlKey && event.key === 'i') {
+                window.open('link_da_imagem');
+            } else if (event.ctrlKey && event.key === 'm') {
+                document.getElementById('message-input').focus();
+            }
+        });
+
+        function sendMessage() {
+            var message = document.getElementById('message-input').value;
+            // Aqui você pode adicionar o código para enviar a mensagem
+            alert('Mensagem enviada: ' + message);
+        }
+    </script>
+</body>
+</html>
